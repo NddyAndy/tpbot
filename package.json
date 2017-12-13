@@ -3,12 +3,21 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "deploy": "git push heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NddyAndy/tpbot"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
     "express": "~4.15.5",
     "morgan": "~1.9.0",
     "request": "^2.83.0"
+  },
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.5.1"
   }
 }
