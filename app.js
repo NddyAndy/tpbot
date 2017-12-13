@@ -132,8 +132,8 @@ function handleMessage(sender_psid, received_message) {
          let webhook_event = entry.messaging[0];
          console.log(webhook_event);
          
-        //  let sender_psid = webhook_event.sender.id;
-        //  console.log('Sender PSID: ' + sender_psid);
+         let sender_psid = webhook_event.sender.id;
+         console.log('Sender PSID: ' + sender_psid);
         //  // Check if the event is a message or postback and
         // // pass the event to the appropriate handler function
         //  if (webhook_event.message) {
