@@ -114,6 +114,7 @@ function handleMessage(sender_psid, received_message) {
 
   app.get('/', (req, res) => {
     res.status(200).json({msg: 'hello world'});
+    console.log(process.env.PAGE_ACCESS_TOKEN);
   });
   
   // Creates the endpoint for our webhook 
