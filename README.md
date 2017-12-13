@@ -1,6 +1,6 @@
 # tpbot
 
-A nessenger bot that gives directions to ease transportation in Nigeria.
+A nessenger bot that give directions to ease transportation in Nigeria.
 
 
 
