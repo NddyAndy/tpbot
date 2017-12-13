@@ -20,11 +20,16 @@ function handleMessage(sender_psid, received_message) {
 
       // add variable here
       let chobaToAlakahia = /from choba to alakahia/i;
-
+      let chobaToRumuosi = /from choba to rumuosi/i;
   
       if(received_message.text.match(chobaToAlakahia)) {
         response = {
           "text": `Take a taxi at "choba junction" going to alakahia!\ncost: N50. \nHave a safe trip!`
+        }
+      }
+      else if(received_message.text.match(chobaToRumuosi)) {
+        response = {
+          "text": `Take a taxi at "choba junction" going to Rumuosi direct!\ncost: N50. \nHave a safe trip!`
         }
       }
       // else if () {
