@@ -19,7 +19,7 @@ function handleMessage(sender_psid, received_message) {
     if (received_message.text) {
 
       // add variable here
-      let chobaToAlakahia = /from choba to alakahia/i;
+      let chobaToAlakahia = /from choba to alakahia/;
 
   
       if(received_message.text.match(chobaToAlakahia)) {
@@ -114,7 +114,7 @@ function handleMessage(sender_psid, received_message) {
 
   app.get('/', (req, res) => {
     res.status(200).json({msg: 'hello world'});
-  })
+  });
   
   // Creates the endpoint for our webhook 
   app.post('/webhook', (req, res) => {  
@@ -134,13 +134,13 @@ function handleMessage(sender_psid, received_message) {
          
          let sender_psid = webhook_event.sender.id;
          console.log('Sender PSID: ' + sender_psid);
-        //  // Check if the event is a message or postback and
-        // // pass the event to the appropriate handler function
-        //  if (webhook_event.message) {
-        //   handleMessage(sender_psid, webhook_event.message);        
-        // } else if (webhook_event.postback) {
-        //   handlePostback(sender_psid, webhook_event.postback);
-        // }
+         // Check if the event is a message or postback and
+        // pass the event to the appropriate handler function
+         if (webhook_event.message) {
+          handleMessage(sender_psid, webhook_event.message);        
+        } else if (webhook_event.postback) {
+          handlePostback(sender_psid, webhook_event.postback);
+        }
   
        });
    
